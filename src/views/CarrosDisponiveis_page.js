@@ -45,13 +45,15 @@ export default function Carros_Disponiveis(props) {
                                     {`Modelo: ${item.nome} ${item.motor}, para ${item.potencia}cv`}
                                 </Text>
                                 </View>
-                                <Button style={styles.botaoRedirect}
-                                    mode="contained" 
-                                    onPress={() => deletar(item.id)}
-                                    color="#40019B" > 
-                                    remover remap
-                                </Button>
                             </TouchableOpacity>
+                            <View>
+                            <Button style={styles.botaoRedirect}
+                                mode="contained" 
+                                onPress={() => deletar(item.id)}
+                                color="#40019B" > 
+                                remover remap
+                            </Button>
+                            </View>
 
                         </View>
                     }

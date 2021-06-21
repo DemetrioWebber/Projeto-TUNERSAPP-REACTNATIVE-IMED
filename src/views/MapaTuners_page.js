@@ -11,8 +11,8 @@ export default function Mapa() {
     const tuners = useSelector(store => store.tuners) // array []
     const [myPosition, setMyPosition] = useState(null)
     const [pontoInicial, setPontoInicial] = useState({
-        latitude: -28.260392632865123,
-        longitude: -52.407892697640044,
+        latitude: -28.2130702,
+        longitude: -51.5447743,
         latitudeDelta: 0.015,
         longitudeDelta: 0.015
     })
@@ -57,9 +57,7 @@ export default function Mapa() {
                     >
                     </Marker>
                     : null}
-                {
-                    //map é com um for só que para as Views
-                }
+
                 {tuners.map(item =>
                     <Marker
                         key={item.id}
@@ -68,8 +66,9 @@ export default function Mapa() {
                             longitude: item.longitude
                         }}
                         title={item.nome}
+                        description={item.localizacao}
                     >
-                        <Text style={{ backgroundColor: "white" }}>{item.nome}</Text>
+                        <Text style={{ backgroundColor: "#40019B", color: "white"}}>{item.nome}</Text>
                     </Marker>)}
 
             </MapView>
